@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  text-align: center;
+  font-family: Poppins, "Segoe UI", sans-serif;
+}
+
+/* Navigation styles */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px;
+  border-bottom: 2px solid #e3e3e3;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #929292;
+  margin: 0 20px;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a.active {
+  color: black;
+}
+
+/* Base section and text styles */
+.section,
+.text-primary {
+  padding: 40px 20px;
+  margin: 80px auto 0;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Typography styles */
+h2.text-primary,
+.section h2,
+.text-primary h2,
+.scroll-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+.section p,
+.text-primary p,
+.scroll-container p {
+  line-height: 1.6;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.main-content .section:first-child {
+  margin-top: 100px;
+}
+
+/* Section hover effects */
+.section:hover,
+.section-link:hover .section {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.section-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* History page specific styles */
+.scroll-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 70px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  scroll-snap-align: center;
+  box-sizing: border-box;
+  padding: 40px;
+  flex: 0 0 100%;
+  background-color: white;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+/* Image styles */
+.history-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trent-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-image-raph {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin: -10px auto 10px auto;
+  display: block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styles */
+.wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: #2b6cb0;
+  border-radius: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* Layout components */
+.vertical-1,
+.vertical-2 {
+  padding: 40px 20px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  max-width: 1200px;
+}
+
+.vertical-1 {
+  margin-top: 100px;
+}
+
+.horizontal {
+  padding: 40px 20px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: calc(45% - 40px);
+  display: inline-block;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 0 20px;
+  margin-top: 80px;
+  border-top: 2px solid #e3e3e3;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-section {
+  margin: 20px;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  color: #2b6cb0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-section a {
+  display: block;
+  color: #929292;
+  text-decoration: none;
+  margin: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: black;
+}
+
+.footer-section p {
+  color: #929292;
+  margin: 8px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.footer-bottom p {
+  color: #929292;
+  font-size: 0.9rem;
+}
+
+/* Responsive styles - consolidated */
+@media (max-width: 768px) {
+  /* Base responsive styles */
+  .section,
+  .text-primary {
+    margin: 40px 15px 0;
+    padding: 30px 15px;
+  }
+
+  h2.text-primary,
+  .section h2,
+  .text-primary h2,
+  .scroll-container h2 {
+    font-size: 1.5rem;
+  }
+
+  /* History page responsive */
+  .scroll-container {
+    width: 100%;
+    margin: 80px auto 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .text-primary {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .history-image {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .trent-image {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* Footer responsive */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .scroll-container {
+    margin: 60px auto 0;
+  }
+
+  .wrapper {
+    padding: 5px;
+    gap: 5px;
+  }
+
+  .text-primary {
+    width: 95%;
+    padding: 15px;
+  }
+}
