@@ -41,7 +41,7 @@ html {
 .section,
 .text-primary {
   padding: 40px 20px;
-  margin: 80px auto 0;
+  margin: 60px auto 0;
   max-width: 800px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -73,8 +73,8 @@ h2.text-secondary {
   font-size: 1rem;
 }
 
-.main-content .section:first-child {
-  margin-top: 100px;
+.section-link:first-child {
+  margin-top: 130px;
 }
 
 /* Section hover effects */
