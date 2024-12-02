@@ -1,0 +1,287 @@
+#space {
+  height: 10px;
+  display: block;
+}
+
+nav {
+  padding: 90px 50px 50px 50px;
+  text-align: center;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e3e3e3;
+}
+
+nav > ul > li {
+  float: left;
+  width: 150px;
+  height: 65px;
+  line-height: 65px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav > ul > li:hover {
+  background: #cfcdcd;
+  color: #2b6cb0;
+  border-radius: 10px;
+}
+
+ul.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
+
+ul.drop-menu li,
+ul.drop1-menu li,
+ul.drop2-menu li {
+  background: #9f9f9f;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+ul.drop-menu li:hover,
+ul.drop1-menu li:hover,
+ul.drop2-menu li:hover {
+  background: #8d8d8d;
+  color: #2b6cb0;
+}
+
+ul.drop-menu li a,
+ul.drop1-menu li a,
+ul.drop2-menu li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+ul.drop-menu li a:hover,
+ul.drop1-menu li a:hover,
+ul.drop2-menu li a:hover {
+  color: #2b6cb0;
+}
+
+ul.drop-menu li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+ul.drop-menu li {
+  display: none;
+}
+
+li:hover > ul.drop-menu li {
+  display: block;
+  opacity: 0;
+  animation: menuSlide 0.3s ease forwards;
+}
+/*animation-delay tambem seria fixe*/
+li:hover > ul.drop-menu li:nth-child(1) {
+  animation-duration: 0.3s;
+}
+li:hover > ul.drop-menu li:nth-child(2) {
+  animation-duration: 0.5s;
+}
+li:hover > ul.drop-menu li:nth-child(3) {
+  animation-duration: 0.7s;
+}
+li:hover > ul.drop-menu li:nth-child(4) {
+  animation-duration: 0.9s;
+}
+
+@keyframes menuSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+ul.drop1-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
+
+ul.drop1-menu li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+ul.drop1-menu li {
+  display: none;
+}
+
+li:hover > ul.drop1-menu li {
+  display: block;
+  opacity: 0;
+  transform-origin: top center;
+  animation: menuRotate 0.3s ease-in-out forwards;
+}
+
+ul.drop1-menu {
+  perspective: 1000px;
+}
+
+li:hover > ul.drop1-menu li:nth-child(1) {
+  animation-duration: 0.3s;
+}
+li:hover > ul.drop1-menu li:nth-child(2) {
+  animation-duration: 0.5s;
+}
+li:hover > ul.drop1-menu li:nth-child(3) {
+  animation-duration: 0.7s;
+}
+li:hover > ul.drop1-menu li:nth-child(4) {
+  animation-duration: 0.9s;
+}
+
+@keyframes menuRotate {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+ul.drop2-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
+
+ul.drop2-menu li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+ul.drop2-menu li {
+  display: none;
+}
+
+li:hover > ul.drop2-menu li {
+  display: block;
+  opacity: 0;
+  animation: menuFancy 0.3s ease-in-out forwards;
+}
+
+ul.drop-menu {
+  perspective: 1000px;
+}
+
+li:hover > ul.drop2-menu li:nth-child(1) {
+  animation-duration: 0.3s;
+}
+li:hover > ul.drop2-menu li:nth-child(2) {
+  animation-duration: 0.5s;
+}
+li:hover > ul.drop2-menu li:nth-child(3) {
+  animation-duration: 0.7s;
+}
+li:hover > ul.drop2-menu li:nth-child(4) {
+  animation-duration: 0.9s;
+}
+
+@keyframes menuFancy {
+  0% {
+    opacity: 0;
+    transform: scale(0.3s) translateY(-60px);
+  }
+  70% {
+    transform: scale(1.3) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+
+.tricks-container {
+  max-width: 1000px;
+  margin: 100px auto 0;
+  padding: 20px;
+}
+
+.trick-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+.trick-title {
+  color: #2b6cb0;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.trick-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 45%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .tricks-container {
+    padding: 15px;
+    margin-top: 80px;
+  }
+
+  .trick-section {
+    padding: 20px;
+  }
+
+  .trick-title {
+    font-size: 1.5rem;
+  }
+
+  .video-container {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+}
