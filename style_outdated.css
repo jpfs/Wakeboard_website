@@ -67,14 +67,20 @@ h2.text-secondary {
 .section p,
 .text-primary p,
 .scroll-container p,
-.text-secondary p {
+.text-secondary p,
+.text {
   line-height: 1.6;
   color: #4a5568;
   font-size: 1rem;
 }
 
+.section-link {
+  width: auto;
+  margin: auto;
+}
+
 .section-link:first-child {
-  margin-top: 130px;
+  margin-top: 70px;
 }
 
 /* Section hover effects */
@@ -91,7 +97,7 @@ h2.text-secondary {
 .vertical-2 {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: inline-block;
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
