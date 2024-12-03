@@ -38,7 +38,7 @@ html {
 }
 
 /* Base section and text styles */
-.text-primary {
+.home-primary {
   padding: 40px 20px;
   margin: 60px auto 0;
   max-width: 800px;
@@ -47,22 +47,24 @@ html {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .text-center {
   text-align: center;
 }
 
 /* Typography styles */
-h2.text-primary,
-.text-primary h2,
-h2.text-secondary {
+h2.text-secondary,
+h2.text {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #2b6cb0;
   font-weight: 600;
 }
 
-.text-primary p,
-.text-secondary p,
 .text {
   line-height: 1.6;
   color: #4a5568;
