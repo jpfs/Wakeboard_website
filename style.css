@@ -17,24 +17,24 @@ html {
   top: 0;
   width: 100%;
   padding: 25px;
-  border-bottom: 2px solid #e3e3e3;
-  background-color: white;
+  border-bottom: 5px solid rgb(160, 160, 160);
+  background-color: rgb(179, 179, 179);
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .main-nav a {
   text-decoration: none;
-  color: #929292;
+  color: rgb(227, 227, 227);
   margin: 0 20px;
 }
 
 .main-nav a:hover {
-  color: black;
+  color: #2b6cb0;
 }
 
 .main-nav a.active {
-  color: black;
+  color: #2b6cb0;
 }
 
 /* Base section and text styles */
@@ -261,7 +261,7 @@ h2.text {
   display: flex;
   justify-content: space-between;
   max-width: 1000px;
-  margin: 100px auto 40px;
+  margin: 145px auto 40px;
   padding: 20px;
   gap: 30px;
 }
@@ -271,7 +271,7 @@ h2.text {
   flex: 1;
   background-color: #ffffff;
   height: 400px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -330,10 +330,10 @@ h2.text {
 
 /* Footer styles */
 .footer {
-  background-color: #f8f9fa;
+  background-color: rgb(179, 179, 179);
   padding: 40px 0 20px;
   margin-top: 80px;
-  border-top: 2px solid #e3e3e3;
+  border-top: 5px solid rgb(160, 160, 160);
 }
 
 .footer-content {
@@ -358,7 +358,7 @@ h2.text {
 
 .footer-section a {
   display: block;
-  color: #929292;
+  color: rgb(227, 227, 227);
   text-decoration: none;
   margin: 8px 0;
   transition: color 0.3s ease;
@@ -369,7 +369,7 @@ h2.text {
 }
 
 .footer-section p {
-  color: #929292;
+  color: rgb(227, 227, 227);
   margin: 8px 0;
 }
 
@@ -381,7 +381,7 @@ h2.text {
 }
 
 .footer-bottom p {
-  color: #929292;
+  color: rgb(227, 227, 227);
   font-size: 0.9rem;
 }
 

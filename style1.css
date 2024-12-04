@@ -38,14 +38,17 @@ html {
 }
 
 /* Base section and text styles */
-.section,
-.text-primary {
+.home-primary {
   padding: 40px 20px;
   margin: 60px auto 0;
   max-width: 800px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.main-content {
+  display: flex;
   flex-direction: column;
 }
 
@@ -54,21 +57,14 @@ html {
 }
 
 /* Typography styles */
-h2.text-primary,
-.section h2,
-.text-primary h2,
-.scroll-container h2,
-h2.text-secondary {
+h2.text-secondary,
+h2.text {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #2b6cb0;
   font-weight: 600;
 }
 
-.section p,
-.text-primary p,
-.scroll-container p,
-.text-secondary p,
 .text {
   line-height: 1.6;
   color: #4a5568;
@@ -86,16 +82,13 @@ h2.text-secondary {
 
 /* Section hover effects */
 .section:hover,
-.section-link:hover .section {
+.section-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
-.section-link,
-.horizontal,
-.vertical-1,
-.vertical-2 {
+.scroll-fancy {
   text-decoration: none;
   color: inherit;
   display: inline-block;
