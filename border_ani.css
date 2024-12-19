@@ -1,5 +1,5 @@
 .body-tricks {
-  background-color: black;
+  background-color: var(--background);
 }
 
 @property --angle {
@@ -27,8 +27,8 @@
   background-image: conic-gradient(
     from var(--angle),
     transparent 70%,
-    red,
-    blue
+    var(--primary),
+    var(--accent)
   );
   animation: 3s steam1 linear infinite;
 }
@@ -37,8 +37,8 @@
   background-image: conic-gradient(
     from var(--angle),
     transparent 70%,
-    green,
-    orange
+    var(--primary-dark),
+    var(--primary)
   );
   animation: 3s steam2 linear infinite;
 }
@@ -48,8 +48,8 @@
   background-image: conic-gradient(
     from var(--angle),
     transparent 70%,
-    purple,
-    pink
+    var(--accent),
+    var(--primary)
   );
   animation: 3s steam1 linear infinite;
 }
