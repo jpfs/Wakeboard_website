@@ -33,25 +33,92 @@ body {
   top: 0;
   width: 100%;
   padding: 25px;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--white);
+  background-color: white;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #e3e3e3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.main-nav a {
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nav-menu a {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: #929292;
   margin: 0 20px;
+  transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.nav-menu a:hover {
   color: var(--primary);
 }
 
-.main-nav a.active {
+.nav-menu a.active {
   color: var(--primary);
-  font-weight: 500;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 3rem;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background: #929292;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #929292;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+.nav-toggle.active .hamburger {
+  background: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
 }
 
 /* Base section and text styles */
@@ -420,6 +487,34 @@ h2.text {
 
 /* Responsive styles - consolidated */
 @media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 72px; /* Adjusted to match your header height */
+    right: -100%;
+    flex-direction: column;
+    background-color: white;
+    width: 70%;
+    max-width: 300px;
+    height: calc(100vh - 72px);
+    padding: 2rem;
+    transition: right 0.3s ease;
+    gap: 1rem;
+    border-left: 2px solid #e3e3e3;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.show {
+    right: 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu a {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
   /* Base responsive styles */
   .section,
   .text-primary {

@@ -6,9 +6,25 @@
   padding: 0;
 }
 
+:root {
+  --primary: #2563eb; /* Bright blue - for primary actions and highlights */
+  --primary-dark: #1d4ed8; /* Darker blue - for hover states */
+  --secondary: #4b5563; /* Gray - for secondary text */
+  --accent: #8b5cf6; /* Purple - for accents and special elements */
+  --background: #f8fafc; /* Light gray - main background */
+  --white: #ffffff; /* White - for cards and containers */
+  --text-primary: #1e293b; /* Dark blue-gray - primary text */
+  --text-secondary: #64748b; /* Medium gray - secondary text */
+  --border: #e2e8f0; /* Light gray - for borders */
+}
+
 html {
   text-align: center;
   font-family: Poppins, "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--background);
 }
 
 /* Navigation styles */
@@ -17,34 +33,42 @@ html {
   top: 0;
   width: 100%;
   padding: 25px;
-  border-bottom: 2px solid #e3e3e3;
-  background-color: white;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--white);
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .main-nav a {
   text-decoration: none;
-  color: #929292;
+  color: var(--text-secondary);
   margin: 0 20px;
 }
 
 .main-nav a:hover {
-  color: black;
+  color: var(--primary);
 }
 
 .main-nav a.active {
-  color: black;
+  color: var(--primary);
+  font-weight: 500;
 }
 
 /* Base section and text styles */
+
+.home-primary,
+.trick-section,
+.card {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+}
+
 .home-primary {
   padding: 40px 20px;
   margin: 60px auto 0;
   max-width: 800px;
-  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .main-content {
@@ -58,16 +82,25 @@ html {
 
 /* Typography styles */
 h2.text-secondary,
+h2.text,
+.trick-title {
+  color: var(--primary);
+}
+
+.text,
+.trick-description {
+  color: var(--text-primary);
+}
+
+h2.text-secondary,
 h2.text {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #2b6cb0;
   font-weight: 600;
 }
 
 .text {
   line-height: 1.6;
-  color: #4a5568;
   font-size: 1rem;
 }
 
@@ -261,7 +294,7 @@ h2.text {
   display: flex;
   justify-content: space-between;
   max-width: 1000px;
-  margin: 100px auto 40px;
+  margin: 145px auto 40px;
   padding: 20px;
   gap: 30px;
 }
@@ -271,7 +304,7 @@ h2.text {
   flex: 1;
   background-color: #ffffff;
   height: 400px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -330,10 +363,10 @@ h2.text {
 
 /* Footer styles */
 .footer {
-  background-color: #f8f9fa;
+  background-color: var(--background);
+  border-top: 1px solid var(--border);
   padding: 40px 0 20px;
   margin-top: 80px;
-  border-top: 2px solid #e3e3e3;
 }
 
 .footer-content {
@@ -351,25 +384,25 @@ h2.text {
 }
 
 .footer-section h3 {
-  color: #2b6cb0;
+  color: var(--primary);
   margin-bottom: 15px;
   font-size: 1.2rem;
 }
 
 .footer-section a {
   display: block;
-  color: #929292;
+  color: var(--text-secondary);
   text-decoration: none;
   margin: 8px 0;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: black;
+  color: var(--primary);
 }
 
 .footer-section p {
-  color: #929292;
+  color: var(--text-secondary);
   margin: 8px 0;
 }
 
@@ -381,7 +414,7 @@ h2.text {
 }
 
 .footer-bottom p {
-  color: #929292;
+  color: rgb(227, 227, 227);
   font-size: 0.9rem;
 }
 
