@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>Email: contact@wakeboarding.com</p>
-          <p>Phone: (555) 123-4567</p>
+          <p>Email: jp.f.s@hotmail.com</p>
+          <p>Phone: +351 932861191</p>
         </div>
       </div>
       <div class="footer-bottom">
